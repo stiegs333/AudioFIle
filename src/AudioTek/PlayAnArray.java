@@ -10,7 +10,6 @@ public class PlayAnArray {
 	}
     private static int sampleRate = 8000;
     public void playSound( int sF, int sec) {
-    	//for(int i =0; i <100000*sec;i++){
          AudioFormat af = new AudioFormat(sampleRate, 16, 1, true, true);
         try {
             SourceDataLine line = AudioSystem.getSourceDataLine(af);
@@ -40,7 +39,7 @@ public class PlayAnArray {
         return sin;
     }
     private static void play(SourceDataLine line, byte[] array) {
-        int length = sampleRate * array.length / 1000;
+       // int length = sampleRate * array.length / 1000;
         line.write(array, 0, array.length);
     }
 }

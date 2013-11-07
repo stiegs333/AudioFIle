@@ -3,7 +3,10 @@ package AudioTek;
 import java.io.IOException;
 
 //import java.awt.Toolkit;
-
+/**
+ * @author Sirxvy
+ * @author
+ */
 public class AudioTek {
 	public  long timer;
 	public long timeOG;

@@ -10,7 +10,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.BufferedOutputStream;
 import java.io.DataOutputStream;
-import java.io.OutputStream;
+
 /**
  * @author Sirxvy
  *
@@ -25,6 +25,12 @@ public class AudioTekDatabase {
 	public AudioTekDatabase(boolean append){
 		   try {
 			FileOutputStream us = new FileOutputStream("UserDataBase.txt", append);
+			try {
+				us.close();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
